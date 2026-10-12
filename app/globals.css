@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ink: #1d1d1b;
+  --muted: #6f6e69;
+  --paper: #f7f6f2;
+  --card: #ffffff;
+  --line: #e4e2dc;
+  --line-strong: #d3d1ca;
+  --accent: #3f6357;
+  --accent-dark: #2d4a40;
+  --soft: #ecf1ee;
+  --warn: #8a6516;
+  --warn-soft: #fbf3e1;
+  --danger: #a23b2c;
+  --danger-soft: #fbeceA;
+}
+* { box-sizing: border-box; }
+html { background: var(--paper); color: var(--ink); }
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-sans), system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: var(--paper);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+button, input, textarea, select { font: inherit; }
+button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible, a:focus-visible, summary:focus-visible {
+  outline: 3px solid #9fc1b4;
+  outline-offset: 2px;
+}
+.serif { font-family: var(--font-serif), "Times New Roman", serif; font-style: italic; font-weight: 400; }
+@media (prefers-reduced-motion: no-preference) {
+  .enter { animation: enter .35s ease-out both; }
+  @keyframes enter { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+  .pulse-dot { animation: pulse 1.6s ease-in-out infinite; }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
+}
