@@ -1,0 +1,33 @@
+# dependencies
+node_modules/
+video/node_modules/
+
+# build output
+.next/
+out/
+video/out/
+next-env.d.ts
+*.tsbuildinfo
+
+# tests
+playwright-report/
+test-results/
+
+# secrets: only .env.example is committed
+.env
+.env.*
+!.env.example
+
+# personal runtime data (resumes, applications, the agent's browser profile)
+data/
+
+# local-only material
+.archive/
+AGENTS.md
+AGENT_BUILD_BRIEF.md
+.claude/
+.vscode/
+.idea/
+*.log
+.DS_Store
+Thumbs.db
